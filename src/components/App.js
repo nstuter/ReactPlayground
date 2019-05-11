@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
 import rollDice from"../logic/RollDice";
 import DicePanel from "./DicePanel";
+import Tabs from './Tabs';
+require('./styles.css');
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +26,12 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <body>
-          <DicePanel clickHandler={this.handleClick} />
+          <Tabs>
+            <div label = "Home">Sample text</div>
+            <div label = "Dice Roller">
+              <DicePanel clickHandler={this.handleClick} />
+            </div>
+          </Tabs>
         </body>
       </div>
     );
