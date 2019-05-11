@@ -22,6 +22,7 @@ class DicePanel extends React.Component {
                     <Dice name="d12" clickHandler={this.handleClick} />
                     <Dice name="d20" clickHandler={this.handleClick} />
                     <Dice name="d100" clickHandler={this.handleClick} />
+                    <Dice name="d?" clickHandler={this.handleClick} />
                 </div>
             </div>
         )

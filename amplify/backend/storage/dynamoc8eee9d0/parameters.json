@@ -1,0 +1,7 @@
+{
+    "tableName": "dynamoc8eee9d0",
+    "partitionKeyName": "session",
+    "partitionKeyType": "S",
+    "sortKeyName": "user",
+    "sortKeyType": "S"
+}

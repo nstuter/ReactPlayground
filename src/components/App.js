@@ -9,9 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { submission: '', text: '', value: 0 };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.tabChange = this.tabChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = diceName => {
@@ -37,33 +35,6 @@ class App extends Component {
       id: Date.now()
     };
     this.setState({ submission: newRequest, text: e.target.value });
-  }
-
-  tabChange(event, value) {
-    const newRequest = {
-      text: '',
-      id: Date.now()
-    };
-    this.setState({ submission: newRequest, text: '', value: value});
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    if (!this.state.text)
-    {
-      return;
-    }
-    if (!this.state.text.length) {
-      return;
-    }
-    const newRequest = {
-      text: this.state.text,
-      id: Date.now()
-    };
-    this.setState(state=> ({
-      submission: newRequest, 
-      text: ''
-    }));
   }
 }
 
