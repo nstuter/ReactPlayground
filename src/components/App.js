@@ -13,6 +13,7 @@ class App extends Component {
     super(props);
     this.state = { submission: '', text: '', value: 0 };
     this.handleClick = this.handleClick.bind(this);
+    document.title = "Rykkata's Homepage";
   }
 
   handleClick = diceName => {
