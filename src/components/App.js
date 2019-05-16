@@ -5,7 +5,8 @@ import './App.css';
 
 import rollDice from"../logic/RollDice";
 import DicePanel from "./DicePanel";
-import Tabs from './Tabs';
+import MenuBar from "./MenuBar";
+//import Tabs from './Tabs';
 require('./styles.css');
 
 class App extends Component {
@@ -27,12 +28,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <body>
-          <Tabs>
+        <MenuBar />
+        <DicePanel />
+        { /**  <Tabs>
             <div label = "Home">Sample text</div>
             <div label = "Dice Roller">
               <DicePanel clickHandler={this.handleClick} />
             </div>
-          </Tabs>
+          </Tabs> */}
         </body>
       </div>
     );
